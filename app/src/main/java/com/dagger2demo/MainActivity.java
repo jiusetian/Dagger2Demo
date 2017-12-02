@@ -15,6 +15,10 @@ public class MainActivity extends AppCompatActivity {
     @Inject
     Engine engineB;
 
+    @QualifierA
+    @Inject
+    Engine engineC;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,5 +28,7 @@ public class MainActivity extends AppCompatActivity {
         engineA.run();
 
         engineB.run();
+
+        engineC.run();
     }
 }

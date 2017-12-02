@@ -11,6 +11,7 @@ public class Engine {
 
     Engine(String gear){
         this.gear=gear;
+        Log.d("tag","创建engine");
     }
 
     @Inject
