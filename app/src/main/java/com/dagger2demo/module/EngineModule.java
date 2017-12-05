@@ -2,7 +2,7 @@ package com.dagger2demo.module;
 
 import dagger.Module;
 import dagger.Provides;
-import util.CarScope;
+import com.dagger2demo.util.CarScope;
 
 @Module
 public class EngineModule {

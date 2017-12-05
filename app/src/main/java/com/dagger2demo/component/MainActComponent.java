@@ -5,7 +5,7 @@ import com.dagger2demo.MainActivity;
 import com.dagger2demo.module.EngineModule;
 
 import dagger.Component;
-import util.CarScope;
+import com.dagger2demo.util.CarScope;
 
 @CarScope
 @Component(modules = EngineModule.class,dependencies = ApplicationComponent.class)

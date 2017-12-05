@@ -1,12 +1,12 @@
-package util;
+package com.dagger2demo.util;
 
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import javax.inject.Scope;
+import javax.inject.Qualifier;
 
-@Scope
+@Qualifier
 @Retention(RetentionPolicy.RUNTIME)
-public @interface CarScope {
+public @interface QualifierB {
 }
