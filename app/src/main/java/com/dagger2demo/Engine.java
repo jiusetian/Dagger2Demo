@@ -1,6 +1,7 @@
 package com.dagger2demo;
 
 
+import android.content.Context;
 import android.util.Log;
 
 import javax.inject.Inject;
@@ -8,14 +9,19 @@ import javax.inject.Inject;
 public class Engine {
 
     private String gear;
-
-    Engine(String gear){
-        this.gear=gear;
-        Log.d("tag","创建engine");
-    }
+    private Context context;
 
     @Inject
-    Engine(){}
+    Engine(Context context,String gear){
+        this.gear=gear;
+        this.context=context;
+        Log.d("tag","创建有参数的engine");
+    }
+
+//    @Inject
+//    Engine(){
+//        Log.d("tag","创建无参数的engine");
+//    }
 
     public void run(){
         Log.d("tag","引擎运转起来了");

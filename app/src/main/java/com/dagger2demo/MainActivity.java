@@ -7,15 +7,13 @@ import javax.inject.Inject;
 
 public class MainActivity extends AppCompatActivity {
 
-    @QualifierA
     @Inject
     Engine engineA;
 
-    @QualifierB
-    @Inject
-    Engine engineB;
+//    @QualifierB
+//    @Inject
+//    Engine engineB;
 
-    @QualifierA
     @Inject
     Engine engineC;
 
@@ -24,10 +22,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        DaggerMainActComponent.builder().markCarModule(new MarkCarModule("dd")).build().inject(this);
+        DaggerMainActComponent.builder()
+                .applicationComponent(MyApplication.getInstance().getApplicationComponent())
+                .markEngineModule(new MarkEngineModule("dd"))
+                .build()
+                .inject(this);
+
         engineA.run();
 
-        engineB.run();
+        //engineB.run();
 
         engineC.run();
     }
