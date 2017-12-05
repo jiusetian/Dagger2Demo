@@ -1,4 +1,4 @@
-package com.dagger2demo;
+package com.dagger2demo.entity;
 
 
 import android.content.Context;

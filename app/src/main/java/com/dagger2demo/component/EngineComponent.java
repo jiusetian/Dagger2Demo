@@ -1,5 +1,8 @@
-package com.dagger2demo;
+package com.dagger2demo.component;
 
+
+import com.dagger2demo.ApplicationModule;
+import com.dagger2demo.entity.Engine;
 
 import javax.inject.Singleton;
 

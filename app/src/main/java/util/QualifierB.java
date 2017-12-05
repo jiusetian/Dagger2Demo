@@ -1,4 +1,5 @@
-package com.dagger2demo;
+package util;
+
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -7,6 +8,5 @@ import javax.inject.Qualifier;
 
 @Qualifier
 @Retention(RetentionPolicy.RUNTIME)
-public @interface QualifierA {
-
+public @interface QualifierB {
 }

@@ -3,6 +3,9 @@ package com.dagger2demo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.dagger2demo.entity.Engine;
+import com.dagger2demo.module.EngineModule;
+
 import javax.inject.Inject;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         DaggerMainActComponent.builder()
                 .applicationComponent(MyApplication.getInstance().getApplicationComponent())
-                .markEngineModule(new MarkEngineModule("dd"))
+                .markEngineModule(new EngineModule("dd"))
                 .build()
                 .inject(this);
 
