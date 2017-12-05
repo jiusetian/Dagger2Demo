@@ -7,6 +7,7 @@ import javax.inject.Inject;
 
 public class Glass {
 
+    //
     private Context context;
 
     @Inject
