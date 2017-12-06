@@ -1,8 +1,9 @@
 package com.dagger2demo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
+import com.dagger2demo.component.DaggerMainActComponent;
 import com.dagger2demo.entity.Engine;
 import com.dagger2demo.module.EngineModule;
 
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         DaggerMainActComponent.builder()
                 .applicationComponent(MyApplication.getInstance().getApplicationComponent())
-                .markEngineModule(new EngineModule("dd"))
+                .engineModule(new EngineModule("dd"))
                 .build()
                 .inject(this);
 
